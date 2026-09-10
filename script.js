@@ -94,7 +94,7 @@ const filmek = [
     "rating": 5
 }
 ];
-let tablazat = document.getElementById("tablazat")
+let tablazat = document.getElementById("table-body")
 let tablerow = document.createElement("tr")
 
 let title = document.createElement("td")
@@ -106,21 +106,23 @@ title.textContent = "Title"
 year.textContent = "Year"
 genre.textContent = "Genre"
 rating.textContent = "Rating"
-tablerow.classList.add("col")
     tablerow.appendChild(title)
     tablerow.appendChild(year)
     tablerow.appendChild(genre)
     tablerow.appendChild(rating)
-    tablazat.appendChild(tablerow)
+    document.getElementById("table-head").appendChild(tablerow)
 
 filmek.forEach(e => {
 
     tablerow = document.createElement("tr")
-    //tablerow.classList.add("row")
     let title = document.createElement("td")
     let year = document.createElement("td")
     let genre = document.createElement("td")
     let rating = document.createElement("td")
+
+    
+    
+    
     title.textContent = e.title
 
     year.textContent = e.year
@@ -128,6 +130,12 @@ filmek.forEach(e => {
     genre.textContent = e.genre
 
     rating.textContent = e.rating
+
+    if(e.rating < 3){
+        tablerow.classList.add("low-rating")
+    }
+
+
 
     tablerow.appendChild(title)
     tablerow.appendChild(year)
