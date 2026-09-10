@@ -103,9 +103,6 @@ filmek.forEach(e => {
     let year = document.createElement("td")
     let genre = document.createElement("td")
     let rating = document.createElement("td")
-
-    
-    
     
     title.textContent = e.title
 
