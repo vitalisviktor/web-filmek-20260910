@@ -129,7 +129,12 @@ filmek.forEach(e => {
 
     genre.textContent = e.genre
 
-    rating.textContent = e.rating
+
+
+    rating.textContent = "⭐".repeat(e.rating)
+
+
+
 
     if(e.rating < 3){
         tablerow.classList.add("low-rating")
