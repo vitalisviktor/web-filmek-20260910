@@ -22,15 +22,28 @@
         <tbody id="table-body">
         </tbody>
     </table>
-    <form action="">
+    <form action="" class="form-inline" id="formocska">
+    
+            
+                <label for="Title">Title: </label>
+                <input type="text" placeholder="Title" title="Title" class="form-control" required name="Title">
 
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
+            
+                <label for="Year">Year: </label>
+                <input type="number" placeholder="Year" title="Year" class="form-control" required name="Year">
+
+            
+                <label for="Genre">Genre: </label>
+                <input type="text" placeholder="Genre" title="Genre" class="form-control" required name="Genre">
+
+            
+                <label for="Rating">Rating: </label>
+                <input type="number" placeholder="Rating" max="5" min="1" title="Rating" class="form-control" required name="Rating">
+
+            
+                <input type="submit" name="Submit" id="Submit" title="Submit" class="form-control" value="Add">
 
 
-        <button>Add</button>
     </form>
 </body>
 <script src="script.js"></script>

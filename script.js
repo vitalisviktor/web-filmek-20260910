@@ -104,15 +104,15 @@ filmek.forEach(e => {
     let genre = document.createElement("td")
     let rating = document.createElement("td")
     
-    title.textContent = e.title
+    title.innerText = e.title
 
-    year.textContent = e.year
+    year.innerText = e.year
 
-    genre.textContent = e.genre
+    genre.innerText = e.genre
 
-    rating.textContent = "⭐".repeat(e.rating)
+    rating.innerText = "⭐".repeat(e.rating)
 
-
+  
 
 
     if(e.rating < 3){
@@ -124,3 +124,50 @@ filmek.forEach(e => {
     tablerow.appendChild(rating)
     tablazat.appendChild(tablerow)
 });
+
+const formocska = document.getElementById("formocska")
+
+formocska.addEventListener('submit', function(e){
+  e.preventDefault()
+  const formData = new FormData(formocska)
+  const titleData = formData.get('Title')
+  console.log(titleData)
+  const yearData = formData.get('Year')
+  console.log(yearData)
+  const genreData = formData.get('Genre')
+  console.log(genreData)
+  const ratingData = formData.get('Rating')
+  console.log(ratingData)
+
+  
+    let tablerow = document.createElement("tr")
+    let title = document.createElement("td")
+    let year = document.createElement("td")
+    let genre = document.createElement("td")
+    let rating = document.createElement("td")
+    
+    title.innerText = titleData
+
+    year.innerText = yearData
+
+    genre.innerText = genreData
+
+    rating.innerText = "⭐".repeat(Number(ratingData))
+
+  
+
+
+    if(ratingData < 3){
+        tablerow.classList.add("low-rating")
+    }
+    tablerow.appendChild(title)
+    tablerow.appendChild(year)
+    tablerow.appendChild(genre)
+    tablerow.appendChild(rating)
+    tablazat.appendChild(tablerow)
+
+
+
+}
+)
+
