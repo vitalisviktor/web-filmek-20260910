@@ -131,13 +131,9 @@ formocska.addEventListener('submit', function(e){
   e.preventDefault()
   const formData = new FormData(formocska)
   const titleData = formData.get('Title')
-  console.log(titleData)
   const yearData = formData.get('Year')
-  console.log(yearData)
   const genreData = formData.get('Genre')
-  console.log(genreData)
   const ratingData = formData.get('Rating')
-  console.log(ratingData)
 
   
     let tablerow = document.createElement("tr")
