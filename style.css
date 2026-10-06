@@ -2,3 +2,10 @@
     color: red;
     font-style: italic;
 }
+
+label{
+    margin-right: 20rem;
+}
+input{
+    margin-right: 7rem;
+}

@@ -161,7 +161,7 @@ formocska.addEventListener('submit', function(e){
     tablerow.appendChild(genre)
     tablerow.appendChild(rating)
     tablazat.appendChild(tablerow)
-
+    formocska.reset();
 
 
 }
